@@ -1,0 +1,8 @@
+<h3>Food List</h3>
+<ol ng-if="items">
+  <li ng-repeat="item in items track by $index">
+     {{ item }}
+    <button ng-click="onRemove({index: $index});">Remove Item</button>
+  </li>
+</ol>
+<div ng-if="message !== ''" class="emptyMessage">{{message}}</div>
